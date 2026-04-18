@@ -1,0 +1,256 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #d8ede6 0%, #e8ede0 30%, #f0e8d8 60%, #f5e0cc 100%);
+    min-height: 100vh;
+    padding: 0px 0px 40px;
+  }
+
+  .wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    margin-top: 40px;
+    background: #1e2530;
+    border-radius: 18px;
+    padding: 36px 40px 40px;
+    margin-bottom: 40px;
+  }
+  .hero-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.38);
+    margin-bottom: 14px;
+  }
+  .hero h1 {
+    font-size: 46px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 14px;
+    max-width: 780px;
+  }
+  .hero p {
+    font-size: 13.5px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.42);
+    letter-spacing: 0.01em;
+  }
+
+  /* ── GRID ── */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  /* ── PANEL (shared card style) ── */
+  .panel {
+    background: #f7f5f0;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .panel-header {
+    padding: 26px 28px 22px;
+    border-bottom: 1px solid #ebe8e2;
+  }
+  .panel-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #2a8c7a;
+    margin-bottom: 8px;
+  }
+  .panel-title {
+    font-size: 26px;
+    font-weight: 800;
+    color: #111827;
+    letter-spacing: -0.4px;
+    line-height: 1.15;
+  }
+
+  /* ── RANKINGS PANEL ── */
+  .rankings-body {
+    padding: 0 20px 20px;
+  }
+
+  /* App bar row */
+  .app-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 8px 14px;
+  }
+  .app-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: #2a8c7a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 800;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .app-name {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #111827;
+  }
+
+  /* Rankings list card */
+  .rankings-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 6px 0;
+  }
+
+  .rank-row {
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+    gap: 14px;
+  }
+  .rank-row + .rank-row {
+    border-top: 1px solid #f3f3f1;
+  }
+
+  .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .avatar-dark  { background: #2c3550; }
+  .avatar-orange{ background: #e07040; }
+
+  .rank-info {
+    flex: 1;
+    min-width: 0;
+  }
+  .rank-name {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 3px;
+  }
+  .rank-skills {
+    font-size: 12px;
+    font-weight: 400;
+    color: #9ca3af;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .rank-stats {
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .rank-pct {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111827;
+    display: block;
+    margin-bottom: 3px;
+  }
+  .rank-contrib {
+    font-size: 12px;
+    font-weight: 400;
+    color: #9ca3af;
+  }
+
+  .badge-body {
+    padding: 0 20px 20px;
+  }
+
+  .nav-tabs {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 16px 8px 14px;
+    justify-content: flex-end;
+  }
+  .nav-tab {
+    font-size: 13px;
+    font-weight: 500;
+    color: #6b7280;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  .nav-tab.active {
+    background: #ffffff;
+    color: #111827;
+    font-weight: 600;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+
+  /* badge cards */
+  .badge-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 16px 18px 14px;
+    margin-bottom: 10px;
+  }
+  .badge-card:last-child { margin-bottom: 0; }
+
+  /* progress bar */
+  .progress-bar-wrap {
+    height: 7px;
+    border-radius: 999px;
+    background: #ebe8e2;
+    overflow: hidden;
+    margin-bottom: 14px;
+  }
+  .progress-bar-fill {
+    height: 100%;
+    border-radius: 999px;
+    /* gradient: gold → olive → teal */
+    background: linear-gradient(to right, #d4a012, #7a9e30, #1e8c72);
+  }
+
+  .badge-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 4px;
+    letter-spacing: -0.1px;
+  }
+  .badge-roles {
+    font-size: 12.5px;
+    font-weight: 400;
+    color: #9ca3af;
+    margin-bottom: 12px;
+  }
+  .badge-roles span { margin: 0 2px; }
+  .dot { color: #c4c4c0; font-size: 10px; vertical-align: middle; }
+
+  .progress-bar-wrap-sm {
+    height: 7px;
+    border-radius: 999px;
+    background: #ebe8e2;
+    overflow: hidden;
+  }
+  .fill-74 { width: 74%; }
+  .fill-88 { width: 88%; }
+  .fill-55 { width: 55%; }

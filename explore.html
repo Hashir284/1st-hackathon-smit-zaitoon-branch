@@ -1,0 +1,444 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpHub AI - Explore Help Requests</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #f9f8f4;
+            --secondary-bg: #fcfbf8;
+            --text-dark: #111827;
+            --text-medium: #6b7280;
+            --text-light: #9ca3af;
+            --accent-green: #0d9488;
+            --badge-webdev: #e0f2fe;
+            --badge-webdev-text: #0369a1;
+            --badge-design: #fee2e2;
+            --badge-design-text: #b91c1c;
+            --badge-career: #ffedd5;
+            --badge-career-text: #c2410c;
+            --badge-high: #fecaca;
+            --badge-high-text: #b91c1c;
+            --badge-medium: #fff7ed;
+            --badge-medium-text: #c2410c;
+            --badge-low: #dcfce7;
+            --badge-low-text: #15803d;
+            --badge-solved: #e0f7fa;
+            --badge-solved-text: #0891b2;
+            --badge-open: #f3f4f6;
+            --badge-open-text: #4b5563;
+            --card-border: #e5e7eb;
+            --input-border: #d1d5db;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 24px 60px;
+            box-sizing: border-box;
+        }
+
+        /* Header Styling */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 24px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background-color: var(--accent-green);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .brand-name {
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .nav-section {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .nav-section a {
+            text-decoration: none;
+            color: var(--text-medium);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .nav-section a.active {
+            color: var(--text-dark);
+            font-weight: 600;
+            background-color: #f0f1f1;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+
+        /* Banner Styling */
+        .banner {
+            background-color: #1f2937;
+            color: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 32px;
+        }
+
+        .banner .label {
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #94a3b8;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .banner h1 {
+            font-size: 36px;
+            font-weight: 800;
+            margin: 0 0 16px 0;
+            line-height: 1.2;
+        }
+
+        .banner p {
+            font-size: 14px;
+            color: #e2e8f0;
+            margin: 0;
+            max-width: 600px;
+        }
+
+        /* Main Content Layout */
+        .content-area {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 32px;
+            align-items: start;
+        }
+
+        /* Filter Section Styling */
+        .filter-section {
+            background-color: var(--secondary-bg);
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid var(--card-border);
+        }
+
+        .filter-section h2 {
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 24px 0;
+        }
+
+        .filter-group {
+            margin-bottom: 24px;
+        }
+
+        .filter-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-medium);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .filter-input-wrapper {
+            position: relative;
+        }
+
+        .filter-select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--input-border);
+            border-radius: 8px;
+            background-color: white;
+            color: var(--text-dark);
+            font-size: 14px;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+        .filter-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--input-border);
+            border-radius: 8px;
+            background-color: white;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .filter-input::placeholder {
+            color: var(--text-light);
+        }
+
+        /* Request Feed Styling */
+        .request-feed {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .request-card {
+            background-color: white;
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid var(--card-border);
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: flex-end;
+            gap: 16px;
+        }
+
+        .card-main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .card-header-tags {
+            display: flex;
+            gap: 8px;
+        }
+
+        .card-tags-list {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            font-size: 11px;
+            font-weight: 600;
+            padding: 6px 10px;
+            border-radius: 6px;
+            text-transform: capitalize;
+        }
+
+        /* Badge Colors */
+        .badge.web-development { background-color: var(--badge-webdev); color: var(--badge-webdev-text); }
+        .badge.design { background-color: var(--badge-design); color: var(--badge-design-text); }
+        .badge.career { background-color: var(--badge-career); color: var(--badge-career-text); }
+        .badge.high { background-color: var(--badge-high); color: var(--badge-high-text); }
+        .badge.medium { background-color: var(--badge-medium); color: var(--badge-medium-text); }
+        .badge.low { background-color: var(--badge-low); color: var(--badge-low-text); }
+        .badge.solved { background-color: var(--badge-solved); color: var(--badge-solved-text); }
+        .badge.open { background-color: var(--badge-open); color: var(--badge-open-text); }
+        .badge.skill-tag { background-color: #f1f5f9; color: #475569; }
+
+        .request-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0;
+            color: var(--text-dark);
+            line-height: 1.4;
+        }
+
+        .request-desc {
+            font-size: 13px;
+            color: var(--text-medium);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .card-footer {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-top: 16px;
+        }
+
+        .user-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .user-meta {
+            font-size: 12px;
+            color: var(--text-medium);
+        }
+
+        .details-btn {
+            background-color: var(--secondary-bg);
+            border: 1px solid var(--input-border);
+            border-radius: 8px;
+            padding: 10px 18px;
+            color: var(--text-dark);
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            height: fit-content;
+        }
+
+        .details-btn:hover {
+            background-color: #f3f4f6;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-section">
+            <div class="logo-icon">H</div>
+            <div class="brand-name">HelpHub AI</div>
+        </div>
+        <div class="nav-section">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="explore.html" class="active">Explore</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            <a href="notification.html">Notifications</a>
+        </div>
+    </header>
+
+    <div class="banner">
+        <span class="label">Explore / Feed</span>
+        <h1>Browse help requests with filterable community context.</h1>
+        <p>Filter by category, urgency, skills, and location to surface the best matches.</p>
+    </div>
+
+    <main class="content-area">
+        <aside class="filter-section">
+            <h2>Refine the feed</h2>
+
+            <div class="filter-group">
+                <label for="category">Category</label>
+                <div class="filter-input-wrapper">
+                    <select id="category" class="filter-select">
+                        <option>All categories</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label for="urgency">Urgency</label>
+                <div class="filter-input-wrapper">
+                    <select id="urgency" class="filter-select">
+                        <option>All urgency levels</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label for="skills">Skills</label>
+                <input type="text" id="skills" class="filter-input" placeholder="React, Figma, Git/GitHub">
+            </div>
+
+            <div class="filter-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" class="filter-input" placeholder="Karachi, Lahore, Remote">
+            </div>
+        </aside>
+
+        <section class="request-feed">
+            <div class="request-card">
+                <div class="card-main-content">
+                    <div class="card-header-tags">
+                        <span class="badge web-development">Web Development</span>
+                        <span class="badge high">High</span>
+                        <span class="badge solved">Solved</span>
+                    </div>
+                    <h3>Need help</h3>
+                    <p class="request-desc">help is needed</p>
+                    <div class="card-footer">
+                        <span class="user-name">Ayesha Khan</span>
+                        <span class="user-meta">Karachi • 1 helper interested</span>
+                    </div>
+                </div>
+                <button class="details-btn">Open details</button>
+            </div>
+
+            <div class="request-card">
+                <div class="card-main-content">
+                    <div class="card-header-tags">
+                        <span class="badge web-development">Web Development</span>
+                        <span class="badge high">High</span>
+                        <span class="badge solved">Solved</span>
+                    </div>
+                    <h3>Need help making my portfolio responsive before demo day</h3>
+                    <p class="request-desc">My HTML/CSS portfolio breaks on tablets and I need layout guidance before tomorrow evening.</p>
+                    <div class="card-tags-list">
+                        <span class="badge skill-tag">HTML/CSS</span>
+                        <span class="badge skill-tag">Responsive</span>
+                        <span class="badge skill-tag">Portfolio</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="user-name">Sara Noor</span>
+                        <span class="user-meta">Karachi • 1 helper interested</span>
+                    </div>
+                </div>
+                <button class="details-btn">Open details</button>
+            </div>
+
+            <div class="request-card">
+                <div class="card-main-content">
+                    <div class="card-header-tags">
+                        <span class="badge design">Design</span>
+                        <span class="badge medium">Medium</span>
+                        <span class="badge open">Open</span>
+                    </div>
+                    <h3>Looking for Figma feedback on a volunteer event poster</h3>
+                    <p class="request-desc">I have a draft poster for a campus community event and I want sharper hierarchy, spacing, and CTA copy.</p>
+                    <div class="card-tags-list">
+                        <span class="badge skill-tag">Figma</span>
+                        <span class="badge skill-tag">Poster</span>
+                        <span class="badge skill-tag">Design Review</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="user-name">Ayesha Khan</span>
+                        <span class="user-meta">Lahore • 1 helper interested</span>
+                    </div>
+                </div>
+                <button class="details-btn">Open details</button>
+            </div>
+
+            <div class="request-card">
+                <div class="card-main-content">
+                    <div class="card-header-tags">
+                        <span class="badge career">Career</span>
+                        <span class="badge low">Low</span>
+                        <span class="badge solved">Solved</span>
+                    </div>
+                    <h3>Need mock interview support for internship applications</h3>
+                    <p class="request-desc">Applying to frontend internships and need someone to practice behavioral and technical interview questions with me.</p>
+                    <div class="card-tags-list">
+                        <span class="badge skill-tag">Interview Prep</span>
+                        <span class="badge skill-tag">Career</span>
+                        <span class="badge skill-tag">Frontend</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="user-name">Sara Noor</span>
+                        <span class="user-meta">Remote • 2 helpers interested</span>
+                    </div>
+                </div>
+                <button class="details-btn">Open details</button>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="java.js"></script>
+</html>
