@@ -149,7 +149,7 @@
             
             <div class="d-flex flex-column flex-lg-row align-items-center">
                 <button class="btn btn-signals">Live community signals</button>
-                <button class="btn btn-join">Join the platform</button>
+                <a href="index.html"  class="btn btn-join" style="text-decoration: none; color: #fff;">Join platform</a>
             </div>
         </div>
     </div>
@@ -350,5 +350,27 @@
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const signalsBtn = document.querySelector(".btn-signals");
+if (signalsBtn) {
+    signalsBtn.addEventListener("click", () => {
+        alert("🔥 Live Signals:\n\n• 3 new help requests\n• 2 solved today\n• 5 active mentors online");
+    });
+}
+
+const aiBtn = document.querySelector(".btn-onboarding");
+if (aiBtn) {
+    aiBtn.addEventListener("click", () => {
+        alert("🤖 AI Onboarding:\n\n• Ask better questions\n• Get faster help\n• Improve your request quality");
+    });
+}
+
+const detailBtns = document.querySelectorAll(".btn-details");
+detailBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        alert("Opening request details...");
+    });
+});
+</script>
 </body>
 </html>

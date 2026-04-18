@@ -1,136 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Leaderboard</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="leader.css">
-<link rel="stylesheet" href="nav.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="leader.css">
+  <link rel="stylesheet" href="nav.css">
 
 </head>
+
 <body>
 
-    <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+  <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <div class="brand-box">H</div>
-            HelpHub AI
-        </a>
+      <a class="navbar-brand" href="#">
+        <div class="brand-box">H</div>
+        HelpHub AI
+      </a>
 
-        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+        data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link " href="explore.html">Explore</a></li>
-                <li class="nav-item"><a class="nav-link active" href="leaderboard.html">Leaderboard</a></li>
-                <li class="nav-item"><a class="nav-link" href="ai-center.html">AI Center</a></li>
-            </ul>
-            
-            <div class="d-flex flex-column flex-lg-row align-items-center">
-                <button class="btn btn-signals">Live community signals</button>
-                <button class="btn btn-join">Join platform</button>
-            </div>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="explore.html">Explore</a></li>
+          <li class="nav-item"><a class="nav-link active" href="leaderboard.html">Leaderboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="ai-center.html">AI Center</a></li>
+        </ul>
+
+        <div class="d-flex flex-column flex-lg-row align-items-center">
+          <button class="btn btn-signals">Live community signals</button>
+          <button class="btn btn-join">Join platform</button>
         </div>
+      </div>
     </div>
-</nav>
+  </nav>
 
-<div class="wrapper">
-  <div class="hero">
-    <div class="hero-label">LEADERBOARD</div>
-    <h1>Recognize the people who keep the community moving.</h1>
-    <p>Trust score, contribution count, and badges create visible momentum for reliable helpers.</p>
-  </div>
-  <div class="grid">
-      
+  <div class="wrapper">
+    <div class="hero">
+      <div class="hero-label">LEADERBOARD</div>
+      <h1>Recognize the people who keep the community moving.</h1>
+      <p>Trust score, contribution count, and badges create visible momentum for reliable helpers.</p>
+    </div>
+    <div class="grid">
+
       <div class="panel">
-          <div class="panel-header">
-        <div class="panel-label">TOP HELPERS</div>
-        <div class="panel-title">Rankings</div>
-      </div>
-      <div class="rankings-body">
-
-        <div class="app-bar">
-          <div class="app-icon">H</div>
-          <span class="app-name">HelpHub AI</span>
+        <div class="panel-header">
+          <div class="panel-label">TOP HELPERS</div>
+          <div class="panel-title">Rankings</div>
         </div>
+        <div class="rankings-body">
 
-        <div class="rankings-card">
-
-          <div class="rank-row">
-            <div class="avatar avatar-dark">HA</div>
-            <div class="rank-info">
-              <div class="rank-name">#2 Hassan Ali</div>
-              <div class="rank-skills">JavaScript, React, Git/GitHub</div>
-            </div>
-            <div class="rank-stats">
-              <span class="rank-pct">88%</span>
-              <span class="rank-contrib">24 contributions</span>
-            </div>
+          <div class="app-bar">
+            <div class="app-icon">H</div>
+            <span class="app-name">HelpHub AI</span>
           </div>
 
-          <div class="rank-row">
-            <div class="avatar avatar-orange">SN</div>
-            <div class="rank-info">
-              <div class="rank-name">#3 Sara Noor</div>
-              <div class="rank-skills">Python, Data Analysis</div>
-            </div>
-            <div class="rank-stats">
-              <span class="rank-pct">74%</span>
-              <span class="rank-contrib">11 contributions</span>
-            </div>
-          </div>
+          <div class="rankings-card">
 
+            <div class="rank-row">
+              <div class="avatar avatar-dark">HA</div>
+              <div class="rank-info">
+                <div class="rank-name">#2 Hassan Ali</div>
+                <div class="rank-skills">JavaScript, React, Git/GitHub</div>
+              </div>
+              <div class="rank-stats">
+                <span class="rank-pct">88%</span>
+                <span class="rank-contrib">24 contributions</span>
+              </div>
+            </div>
+
+            <div class="rank-row">
+              <div class="avatar avatar-orange">SN</div>
+              <div class="rank-info">
+                <div class="rank-name">#3 Sara Noor</div>
+                <div class="rank-skills">Python, Data Analysis</div>
+              </div>
+              <div class="rank-stats">
+                <span class="rank-pct">74%</span>
+                <span class="rank-contrib">11 contributions</span>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- RIGHT: Badge System -->
-    <div class="panel">
-      <div class="panel-header">
-        <div class="panel-label">BADGE SYSTEM</div>
-        <div class="panel-title">Trust and achievement</div>
-      </div>
-      <div class="badge-body">
+      <!-- RIGHT: Badge System -->
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-label">BADGE SYSTEM</div>
+          <div class="panel-title">Trust and achievement</div>
+        </div>
+        <div class="badge-body">
 
-        <!-- Nav tabs -->
-        <div class="nav-tabs">
+          <!-- Nav tabs -->
+          <div class="nav-tabs">
             <button class="nav-tab">Dashboard</button>
-          <button class="nav-tab">Explore</button>
-          <button class="nav-tab active">Leaderboard</button>
-        </div>
-
-        <!-- Hassan Ali badge card -->
-        <div class="badge-card">
-          <div class="progress-bar-wrap">
-            <div class="progress-bar-fill fill-88"></div>
+            <button class="nav-tab">Explore</button>
+            <button class="nav-tab active">Leaderboard</button>
           </div>
-          <div class="badge-name">Hassan Ali</div>
-          <div class="badge-roles">Code Rescuer <span class="dot">•</span> Bug Hunter</div>
-          <div class="progress-bar-wrap-sm">
-            <div class="progress-bar-fill fill-74"></div>
-          </div>
-        </div>
 
-        <!-- Sara Noor badge card -->
-        <div class="badge-card">
-          <div class="badge-name">Sara Noor</div>
-          <div class="badge-roles">Community Voice</div>
-          <div class="progress-bar-wrap-sm">
-            <div class="progress-bar-fill fill-55"></div>
+          <!-- Hassan Ali badge card -->
+          <div class="badge-card">
+            <div class="progress-bar-wrap">
+              <div class="progress-bar-fill fill-88"></div>
+            </div>
+            <div class="badge-name">Hassan Ali</div>
+            <div class="badge-roles">Code Rescuer <span class="dot">•</span> Bug Hunter</div>
+            <div class="progress-bar-wrap-sm">
+              <div class="progress-bar-fill fill-74"></div>
+            </div>
           </div>
-        </div>
 
+          <!-- Sara Noor badge card -->
+          <div class="badge-card">
+            <div class="badge-name">Sara Noor</div>
+            <div class="badge-roles">Community Voice</div>
+            <div class="progress-bar-wrap-sm">
+              <div class="progress-bar-fill fill-55"></div>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </div>
 
-  </div><!-- /grid -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</div>
+    </div><!-- /grid -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+      const signalsBtn = document.querySelector(".btn-signals");
+      if (signalsBtn) {
+        signalsBtn.addEventListener("click", () => {
+          alert("🔥 Live Signals:\n\n• 3 new help requests\n• 2 solved today\n• 5 active mentors online");
+        });
+      }
+
+
+      const tabs = document.querySelectorAll(".nav-tab");
+      tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+          tabs.forEach(t => t.classList.remove("active"));
+          tab.classList.add("active");
+        });
+      });
+
+      const rows = document.querySelectorAll(".rank-row");
+      rows.forEach(row => {
+        row.addEventListener("click", () => {
+          const name = row.querySelector(".rank-name").innerText;
+          alert(name);
+        });
+      });
+
+      if (user && user.isLoggedIn) {
+        const brand = document.querySelector(".navbar-brand");
+        if (brand) {
+          brand.innerHTML += ` <span style="font-size:12px; color:#149b8e;">(${user.name})</span>`;
+        }
+      }
+    </script>
+  </div>
 </body>
+
 </html>
