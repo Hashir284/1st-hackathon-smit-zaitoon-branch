@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpHub AI Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f2f1e8;
+            margin: 0;
+        }
+
+        .custom-navbar {
+            padding: 20px 40px;
+            background-color: #f2f1e8;
+            border-bottom: 2px solid rgba(0,0,0,0.04);
+        }
+
+        /* Logo Section & Hover */
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            color: #1a1a1a !important;
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        .brand-box {
+            background-color: #149b8e;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .navbar-brand:hover .brand-box {
+            transform: rotate(15deg) scale(1.1);
+        }
+
+        /* Nav Links Hovers */
+        .nav-link {
+            color: #707070 !important;
+            font-weight: 500;
+            padding: 8px 18px !important;
+            transition: 0.3s ease;
+        }
+
+        /* Sirf un links pe hover jo active nahi hain */
+        .nav-link:hover:not(.active) {
+            color: #149b8e !important;
+            /* transform: translateY(-2px); */
+
+        }
+
+        .nav-link.active {
+            background-color: #e4eadf;
+            color: #149b8e !important;
+            border-radius: 50px;
+        }
+
+        /* White Button Hover */
+        .btn-signals {
+            background-color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 8px 24px;
+            color: #707070;
+            font-size: 0.95rem;
+            margin-right: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: 0.3s ease;
+        }
+
+        .btn-signals:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            color: #149b8e;
+            transform: translateY(-1px);
+        }
+
+        /* Teal Button Hover (Join Platform) */
+        .btn-join {
+            background-color: #149b8e;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 28px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .btn-join:hover {
+            background-color: #0e7a6f;
+            color: white;
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(20, 155, 142, 0.3);
+        }
+
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background: white;
+                padding: 20px;
+                border-radius: 20px;
+                margin-top: 15px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            }
+            .btn-signals { margin-bottom: 10px; width: 100%; }
+            .btn-join { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <div class="brand-box">H</div>
+            HelpHub AI
+        </a>
+
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Explore</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Leaderboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">AI Center</a></li>
+            </ul>
+            
+            <div class="d-flex flex-column flex-lg-row align-items-center">
+                <button class="btn btn-signals">Live community signals</button>
+                <button class="btn btn-join">Join the platform</button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section class="hero-section">
+    <div class="container-fluid px-lg-5">
+        <div class="row g-4">
+            
+            <div class="col-12 col-lg-8">
+                <div class="main-card">
+                    <span class="tagline">SMIT GRAND CODING NIGHT 2026</span>
+                    <h1 class="main-title">Find help faster.<br>Become help that matters.</h1>
+                    <p class="description">HelpHub AI is a community-powered support network for students, mentors, creators, and builders. Ask for help, offer help, track impact.</p>
+                    
+                    <div class="button-group">
+                        <button class="btn-primary-custom">Open product demo</button>
+                        <button class="btn-secondary-custom">Post a request</button>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="stat-box">
+                                <small>MEMBERS</small>
+                                <h3>384+</h3>
+                                <p>Students, mentors, and helpers in the loop.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stat-box">
+                                <small>REQUESTS</small>
+                                <h3>72+</h3>
+                                <p>Support posts shared across learning journeys.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stat-box">
+                                <small>SOLVED</small>
+                                <h3>69+</h3>
+                                <p>Problems resolved through fast community action.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-4">
+                <div class="side-card">
+                    <span class="side-tag">LIVE PRODUCT FEEL</span>
+                    <h2 class="side-title">More than a form. More like an ecosystem.</h2>
+<p class="side-desc">
+    A polished multi-page experience inspired by product platforms, with AI summaries, trust scores, contribution signals, notifications, and leaderboard momentum built directly in HTML, CSS, JavaScript, and LocalStorage.
+</p>
+                    <div class="feature-stack">
+    <div class="feature-item">
+        <h6>AI request intelligence</h6>
+        <p>Auto-categorization, urgency detection, tags, rewrite suggestions, and trend snapshots.</p>
+    </div>
+
+    <div class="feature-item">
+        <h6>Community trust graph</h6>
+        <p>Badges, helper rankings, trust score boosts, and visible contribution history.</p>
+    </div>
+
+    <div class="feature-item">
+        <h3>100%</h3>
+        <p>Top trust score currently active across the sample mentor network.</p>
+    </div>
+</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="core-flow-container">
+    <div class="container-fluid px-lg-5">
+        
+        <div class="row align-items-end mb-4">
+            <div class="col">
+                <span class="section-tag">CORE FLOW</span>
+                <h2 class="section-title">From struggling alone to solving together</h2>
+            </div>
+            <div class="col-auto">
+                <button class="btn-onboarding">Try onboarding AI</button>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-12 col-md-4">
+                <div class="flow-card">
+                    <h5>Ask for help clearly</h5>
+                    <p>Create structured requests with category, urgency, AI suggestions, and tags that attract the right people.</p>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-4">
+                <div class="flow-card">
+                    <h5>Discover the right people</h5>
+                    <p>Use the explore feed, helper lists, notifications, and messaging to move quickly once a match happens.</p>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-4">
+                <div class="flow-card">
+                    <h5>Track real contribution</h5>
+                    <p>Trust scores, badges, solved requests, and rankings help the community recognize meaningful support.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+    
+<section class="requests-section">
+    <div class="container-fluid px-lg-5">
+        
+        <div class="row align-items-end mb-4">
+            <div class="col">
+                <span class="tag">FEATURED REQUESTS</span>
+                <h2 class="title">Community problems currently in motion</h2>
+            </div>
+            <div class="col-auto">
+                <button class="btn-feed">View full feed</button>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-12 col-md-4">
+                <div class="req-card">
+                    <div class="status-badges">
+                        <span class="b-web">Web Development</span>
+                        <span class="b-high">High</span>
+                        <span class="b-solved">Solved</span>
+                    </div>
+                    <h4>Need help</h4>
+                    <p>helpn needed</p>
+                    <div class="req-footer">
+                        <div class="user-info">
+                            <strong>Ayesha Khan</strong>
+                            <small>Karachi • 1 helper interested</small>
+                        </div>
+                        <button class="btn-details">Open details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="req-card">
+                    <div class="status-badges">
+                        <span class="b-web">Web Development</span>
+                        <span class="b-high">High</span>
+                        <span class="b-solved">Solved</span>
+                    </div>
+                    <h4>Need help making my portfolio responsive before demo day</h4>
+                    <p>My HTML/CSS portfolio breaks on tablets and I need layout guidance before tomorrow evening.</p>
+                    <div class="topic-tags">
+                        <span>HTML/CSS</span><span>Responsive</span><span>Portfolio</span>
+                    </div>
+                    <div class="req-footer">
+                        <div class="user-info">
+                            <strong>Sara Noor</strong>
+                            <small>Karachi • 1 helper interested</small>
+                        </div>
+                        <button class="btn-details">Open details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="req-card">
+                    <div class="status-badges">
+                        <span class="b-design">Design</span>
+                        <span class="b-medium">Medium</span>
+                        <span class="b-open">Open</span>
+                    </div>
+                    <h4>Looking for Figma feedback on a volunteer event poster</h4>
+                    <p>I have a draft poster for a campus community event and want sharper hierarchy, spacing, and CTA copy.</p>
+                    <div class="topic-tags">
+                        <span>Figma</span><span>Poster</span><span>Design Review</span>
+                    </div>
+                    <div class="req-footer">
+                        <div class="user-info">
+                            <strong>Ayesha Khan</strong>
+                            <small>Lahore • 1 helper interested</small>
+                        </div>
+                        <button class="btn-details">Open details</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <p class="footer-note">HelpHub AI is built as a premium-feel, multi-page community support product using HTML, CSS, JavaScript, and LocalStorage.</p>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
