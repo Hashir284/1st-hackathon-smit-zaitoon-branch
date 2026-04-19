@@ -1,12 +1,14 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HelpHub AI - Explore Help Requests</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary-bg: #f9f8f4;
@@ -239,15 +241,50 @@
         }
 
         /* Badge Colors */
-        .badge.web-development { background-color: var(--badge-webdev); color: var(--badge-webdev-text); }
-        .badge.design { background-color: var(--badge-design); color: var(--badge-design-text); }
-        .badge.career { background-color: var(--badge-career); color: var(--badge-career-text); }
-        .badge.high { background-color: var(--badge-high); color: var(--badge-high-text); }
-        .badge.medium { background-color: var(--badge-medium); color: var(--badge-medium-text); }
-        .badge.low { background-color: var(--badge-low); color: var(--badge-low-text); }
-        .badge.solved { background-color: var(--badge-solved); color: var(--badge-solved-text); }
-        .badge.open { background-color: var(--badge-open); color: var(--badge-open-text); }
-        .badge.skill-tag { background-color: #f1f5f9; color: #475569; }
+        .badge.web-development {
+            background-color: var(--badge-webdev);
+            color: var(--badge-webdev-text);
+        }
+
+        .badge.design {
+            background-color: var(--badge-design);
+            color: var(--badge-design-text);
+        }
+
+        .badge.career {
+            background-color: var(--badge-career);
+            color: var(--badge-career-text);
+        }
+
+        .badge.high {
+            background-color: var(--badge-high);
+            color: var(--badge-high-text);
+        }
+
+        .badge.medium {
+            background-color: var(--badge-medium);
+            color: var(--badge-medium-text);
+        }
+
+        .badge.low {
+            background-color: var(--badge-low);
+            color: var(--badge-low-text);
+        }
+
+        .badge.solved {
+            background-color: var(--badge-solved);
+            color: var(--badge-solved-text);
+        }
+
+        .badge.open {
+            background-color: var(--badge-open);
+            color: var(--badge-open-text);
+        }
+
+        .badge.skill-tag {
+            background-color: #f1f5f9;
+            color: #475569;
+        }
 
         .request-card h3 {
             font-size: 16px;
@@ -298,9 +335,9 @@
         .details-btn:hover {
             background-color: #f3f4f6;
         }
-
     </style>
 </head>
+
 <body>
     <header>
         <div class="logo-section">
@@ -369,7 +406,9 @@
                         <span class="user-meta">Karachi • 1 helper interested</span>
                     </div>
                 </div>
-                <button class="details-btn">Open details</button>
+                <a href="message.html" class="details-btn">
+                    Open details
+                </a>
             </div>
 
             <div class="request-card">
@@ -380,7 +419,8 @@
                         <span class="badge solved">Solved</span>
                     </div>
                     <h3>Need help making my portfolio responsive before demo day</h3>
-                    <p class="request-desc">My HTML/CSS portfolio breaks on tablets and I need layout guidance before tomorrow evening.</p>
+                    <p class="request-desc">My HTML/CSS portfolio breaks on tablets and I need layout guidance before
+                        tomorrow evening.</p>
                     <div class="card-tags-list">
                         <span class="badge skill-tag">HTML/CSS</span>
                         <span class="badge skill-tag">Responsive</span>
@@ -391,7 +431,9 @@
                         <span class="user-meta">Karachi • 1 helper interested</span>
                     </div>
                 </div>
-                <button class="details-btn">Open details</button>
+                <a href="message.html" class="details-btn">
+                    Open details
+                </a>
             </div>
 
             <div class="request-card">
@@ -402,7 +444,8 @@
                         <span class="badge open">Open</span>
                     </div>
                     <h3>Looking for Figma feedback on a volunteer event poster</h3>
-                    <p class="request-desc">I have a draft poster for a campus community event and I want sharper hierarchy, spacing, and CTA copy.</p>
+                    <p class="request-desc">I have a draft poster for a campus community event and I want sharper
+                        hierarchy, spacing, and CTA copy.</p>
                     <div class="card-tags-list">
                         <span class="badge skill-tag">Figma</span>
                         <span class="badge skill-tag">Poster</span>
@@ -413,7 +456,9 @@
                         <span class="user-meta">Lahore • 1 helper interested</span>
                     </div>
                 </div>
-                <button class="details-btn">Open details</button>
+                <a href="message.html" class="details-btn">
+                    Open details
+                </a>
             </div>
 
             <div class="request-card">
@@ -424,7 +469,8 @@
                         <span class="badge solved">Solved</span>
                     </div>
                     <h3>Need mock interview support for internship applications</h3>
-                    <p class="request-desc">Applying to frontend internships and need someone to practice behavioral and technical interview questions with me.</p>
+                    <p class="request-desc">Applying to frontend internships and need someone to practice behavioral and
+                        technical interview questions with me.</p>
                     <div class="card-tags-list">
                         <span class="badge skill-tag">Interview Prep</span>
                         <span class="badge skill-tag">Career</span>
@@ -435,75 +481,78 @@
                         <span class="user-meta">Remote • 2 helpers interested</span>
                     </div>
                 </div>
-                <button class="details-btn">Open details</button>
+                <a href="message.html" class="details-btn">
+                    Open details
+                </a>
             </div>
         </section>
     </main>
 </body>
 <script>
 
-const detailBtns = document.querySelectorAll(".details-btn");
-detailBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-        const title = btn.parentElement.querySelector("h3").innerText;
-        alert("Opening: " + title);
+    const detailBtns = document.querySelectorAll(".details-btn");
+    detailBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const title = btn.parentElement.querySelector("h3").innerText;
+            alert("Opening: " + title);
+        });
     });
-});
 
-const categorySelect = document.getElementById("category");
-const urgencySelect = document.getElementById("urgency");
-const skillsInput = document.getElementById("skills");
-const locationInput = document.getElementById("location");
+    const categorySelect = document.getElementById("category");
+    const urgencySelect = document.getElementById("urgency");
+    const skillsInput = document.getElementById("skills");
+    const locationInput = document.getElementById("location");
 
-const cards = document.querySelectorAll(".request-card");
+    const cards = document.querySelectorAll(".request-card");
 
-function filterCards() {
-    const category = categorySelect.value.toLowerCase();
-    const urgency = urgencySelect.value.toLowerCase();
-    const skills = skillsInput.value.toLowerCase();
-    const location = locationInput.value.toLowerCase();
+    function filterCards() {
+        const category = categorySelect.value.toLowerCase();
+        const urgency = urgencySelect.value.toLowerCase();
+        const skills = skillsInput.value.toLowerCase();
+        const location = locationInput.value.toLowerCase();
 
-    cards.forEach(card => {
-        const text = card.innerText.toLowerCase();
+        cards.forEach(card => {
+            const text = card.innerText.toLowerCase();
 
-        const matchCategory = category === "all categories" || text.includes(category);
-        const matchUrgency = urgency === "all urgency levels" || text.includes(urgency);
-        const matchSkills = text.includes(skills);
-        const matchLocation = text.includes(location);
+            const matchCategory = category === "all categories" || text.includes(category);
+            const matchUrgency = urgency === "all urgency levels" || text.includes(urgency);
+            const matchSkills = text.includes(skills);
+            const matchLocation = text.includes(location);
 
-        if (matchCategory && matchUrgency && matchSkills && matchLocation) {
-            card.style.display = "grid";
-        } else {
-            card.style.display = "none";
-        }
-    });
-}
-
-if (categorySelect) categorySelect.addEventListener("change", filterCards);
-if (urgencySelect) urgencySelect.addEventListener("change", filterCards);
-if (skillsInput) skillsInput.addEventListener("input", filterCards);
-if (locationInput) locationInput.addEventListener("input", filterCards);
-
-const categories = ["Web Development", "Design", "Career"];
-const urgencies = ["High", "Medium", "Low"];
-
-categories.forEach(c => {
-    const option = document.createElement("option");
-    option.textContent = c;
-    categorySelect.appendChild(option);
-});
-
-urgencies.forEach(u => {
-    const option = document.createElement("option");
-    option.textContent = u;
-    urgencySelect.appendChild(option);
-});
-
-if (user && user.isLoggedIn) {
-    const brand = document.querySelector(".brand-name");
-    if (brand) {
-        brand.innerHTML += ` <span style="font-size:12px; color:#0d9488;">(${user.name})</span>`;
+            if (matchCategory && matchUrgency && matchSkills && matchLocation) {
+                card.style.display = "grid";
+            } else {
+                card.style.display = "none";
+            }
+        });
     }
-}
+
+    if (categorySelect) categorySelect.addEventListener("change", filterCards);
+    if (urgencySelect) urgencySelect.addEventListener("change", filterCards);
+    if (skillsInput) skillsInput.addEventListener("input", filterCards);
+    if (locationInput) locationInput.addEventListener("input", filterCards);
+
+    const categories = ["Web Development", "Design", "Career"];
+    const urgencies = ["High", "Medium", "Low"];
+
+    categories.forEach(c => {
+        const option = document.createElement("option");
+        option.textContent = c;
+        categorySelect.appendChild(option);
+    });
+
+    urgencies.forEach(u => {
+        const option = document.createElement("option");
+        option.textContent = u;
+        urgencySelect.appendChild(option);
+    });
+
+    if (user && user.isLoggedIn) {
+        const brand = document.querySelector(".brand-name");
+        if (brand) {
+            brand.innerHTML += ` <span style="font-size:12px; color:#0d9488;">(${user.name})</span>`;
+        }
+    }
 </script>
+
 </html>

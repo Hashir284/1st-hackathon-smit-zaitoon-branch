@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpHub AI Profile - Ayesha Khan</title>
+    <style>
+        :root {
+            --bg-color: #f6f3eb;
+            --main-card-bg: #1f2937;
+            --main-card-text: #ffffff;
+            --sub-card-bg: #fcf9f2;
+            --sub-card-text: #1f2937;
+            --accent-teal: #0c9d8a;
+            --tag-bg: #e2f0e9;
+            --tag-text: #064a3d;
+            --grey-text: #6b7280;
+            --border-color: #e5e7eb;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 30px;
+            background-color: var(--bg-color);
+            color: var(--sub-card-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* --- Header --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 30px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            background-color: var(--accent-teal);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .logo-text {
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--grey-text);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .nav-links a.profile-link {
+            background-color: #e3ede8;
+            color: var(--sub-card-text);
+            padding: 8px 16px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        /* --- Main Content Layout --- */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* --- Main Profile Card --- */
+        .main-profile-card {
+            background-color: var(--main-card-bg);
+            color: var(--main-card-text);
+            border-radius: 12px;
+            padding: 35px 40px;
+            position: relative;
+        }
+
+        .main-profile-card h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin: 0 0 10px 0;
+        }
+
+        .sub-label {
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: #d1d5db;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .main-profile-card p {
+            font-size: 14px;
+            color: #d1d5db;
+            margin: 0;
+        }
+
+        /* --- Two-Column Layout --- */
+        .columns-container {
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 30px;
+        }
+
+        .column {
+            background-color: var(--sub-card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            border: 1px solid var(--border-color);
+        }
+
+        .column-header-label {
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--grey-text);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .column h2 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin: 0 0 25px 0;
+            line-height: 1.2;
+        }
+
+        /* --- Public Profile Stats --- */
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: var(--grey-text);
+        }
+
+        .stat-value {
+            color: var(--sub-card-text);
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        .divider {
+            border-top: 1px solid #e2e1dc;
+            margin: 20px 0;
+        }
+
+        /* --- Tags --- */
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+            margin-bottom: 25px;
+        }
+
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        /* --- Edit Profile Form --- */
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .inline-inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--grey-text);
+            margin-bottom: 8px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            font-size: 14px;
+            box-sizing: border-box;
+            background-color: #fff;
+            color: var(--sub-card-text);
+        }
+
+        input::placeholder {
+            color: #d1d5db;
+        }
+
+        .save-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: var(--accent-teal);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: opacity 0.2s;
+        }
+
+        .save-btn:hover {
+            opacity: 0.9;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-section">
+                <div class="logo-icon">H</div>
+                <div class="logo-text">HelpHub AI</div>
+            </div>
+            <nav class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="#">Onboarding</a>
+                <a href="profile.html" class="profile-link">Profile</a>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <section class="main-profile-card">
+                <span class="sub-label">PROFILE</span>
+                <h1>Ayesha Khan</h1>
+                <p>Both • Karachi</p>
+            </section>
+
+            <div class="columns-container">
+                <section class="column public-profile">
+                    <span class="column-header-label">PUBLIC PROFILE</span>
+                    <h2>Skills and reputation</h2>
+                    
+                    <div class="stat-row">
+                        <span>Trust score</span>
+                        <span class="stat-value">100%</span>
+                    </div>
+                    
+                    <div class="divider"></div>
+                    
+                    <div class="stat-row">
+                        <span>Contributions</span>
+                        <span class="stat-value">35</span>
+                    </div>
+
+                    <h4 style="font-size: 13px; font-weight: 600; color: #333; margin-bottom: 8px;">Skills</h4>
+                    <div class="tags-container skills">
+                        <span class="tag">Figma</span>
+                        <span class="tag">UI/UX</span>
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">Career Guidance</span>
+                    </div>
+
+                    <h4 style="font-size: 13px; font-weight: 600; color: #333; margin-bottom: 8px;">Badges</h4>
+                    <div class="tags-container badges">
+                        <span class="tag">Design Ally</span>
+                        <span class="tag">Fast Responder</span>
+                        <span class="tag">Top Mentor</span>
+                    </div>
+                </section>
+
+                <section class="column edit-profile">
+                    <span class="column-header-label">EDIT PROFILE</span>
+                    <h2>Update your identity</h2>
+                    
+                    <form>
+                        <div class="form-group inline-inputs">
+                            <div>
+                                <label for="name">Name</label>
+                                <input type="text" id="name" placeholder="Ayesha Khan">
+                            </div>
+                            <div>
+                                <label for="location">Location</label>
+                                <input type="text" id="location" placeholder="Karachi">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="skills-input">Skills</label>
+                            <input type="text" id="skills-input" placeholder="Figma, UI/UX, HTML/CSS, Career Guidance">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interests-input">Interests</label>
+                            <input type="text" id="interests-input" placeholder="Hackathons, UI/UX, Community Building">
+                        </div>
+
+                        <button type="submit" class="save-btn">Save profile</button>
+                    </form>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+<script src="java.js"></script>
+</html>
