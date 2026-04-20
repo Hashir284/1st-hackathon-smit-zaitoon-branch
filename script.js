@@ -49,7 +49,7 @@ function create() {
     console.log(gmail);
 
     gmail.push(userData)
-
+    localStorage.setItem("User", demoUser);
     localStorage.setItem("helphubUser", JSON.stringify(gmail));
 
     window.location.href = "/dashboard.html";
