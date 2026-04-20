@@ -89,6 +89,9 @@ function login() {
         window.location.href = "/dashboard.html";
         localStorage.setItem("User", demoUser);
         // return email 
+    }else{
+        alert("Invalid credentials! Please try again.");
+        return
     }
 }
 
