@@ -14,35 +14,180 @@
 
 </head>
 
+<style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f2f1e8;
+            margin: 0;
+        }
+
+        .custom-navbar {
+            padding: 20px 40px;
+            background-color: #f2f1e8;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.04);
+        }
+
+        /* Logo Section & Hover */
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            color: #1a1a1a !important;
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        .brand-box {
+            background-color: #149b8e;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .navbar-brand:hover .brand-box {
+            transform: rotate(15deg) scale(1.1);
+        }
+
+        /* Nav Links Hovers */
+        .nav-link {
+            color: #707070 !important;
+            font-weight: 500;
+            padding: 8px 18px !important;
+            transition: 0.3s ease;
+        }
+
+        /* Sirf un links pe hover jo active nahi hain */
+        .nav-link:hover:not(.active) {
+            color: #149b8e !important;
+            transform: translateY(-2px);
+
+        }
+
+        .nav-link.active {
+            background-color: #e4eadf;
+            color: #149b8e !important;
+            border-radius: 50px;
+        }
+
+        /* White Button Hover */
+        .btn-signals {
+            background-color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 8px 24px;
+            color: #707070;
+            font-size: 0.95rem;
+            margin-right: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: 0.3s ease;
+        }
+
+        .btn-signals:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            color: #149b8e;
+            transform: translateY(-1px);
+        }
+
+        /* Teal Button Hover (Join Platform) */
+        .btn-join {
+            background-color: #149b8e;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 28px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .btn-join:hover {
+            background-color: #0e7a6f;
+            color: white;
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(20, 155, 142, 0.3);
+        }
+
+        .btn-onboarding {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.btn-onboarding:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background: white;
+                padding: 20px;
+                border-radius: 20px;
+                margin-top: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .btn-signals {
+                margin-bottom: 10px;
+                width: 100%;
+            }
+
+            .btn-join {
+                width: 100%;
+            }
+        }
+
+        
+    </style>
+
 <body>
 
   <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <div class="brand-box">H</div>
-        HelpHub AI
-      </a>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <div class="brand-box">H</div>
+                HelpHub AI
+            </a>
 
-      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
-        data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link " href="explore.html">Explore</a></li>
-          <li class="nav-item"><a class="nav-link active" href="leaderboard.html">Leaderboard</a></li>
-          <li class="nav-item"><a class="nav-link" href="ai-center.html">AI Center</a></li>
-        </ul>
-
-        <div class="d-flex flex-column flex-lg-row align-items-center">
-          <button class="btn btn-signals">Live community signals</button>
-          <button class="btn btn-join">Join platform</button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="explore.html">Explore</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Leaderboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ai-center.html">AI Center</a></li>
+                </ul>
+                    <a href="profile.html" class="btn-onboarding" style="text-decoration: none; color: #00000094; margin-right: 20px;">Profile</a>
+                    
+                    <a href="create-react.html" class="btn btn-join" style="text-decoration: none; color: #fff;">Join
+                        platform</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </nav>
+    </nav>
 
   <div class="wrapper">
     <div class="hero">
@@ -133,42 +278,13 @@
         </div>
       </div>
 
-    </div><!-- /grid -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-
-      const signalsBtn = document.querySelector(".btn-signals");
-      if (signalsBtn) {
-        signalsBtn.addEventListener("click", () => {
-          alert("🔥 Live Signals:\n\n• 3 new help requests\n• 2 solved today\n• 5 active mentors online");
-        });
-      }
-
-
-      const tabs = document.querySelectorAll(".nav-tab");
-      tabs.forEach(tab => {
-        tab.addEventListener("click", () => {
-          tabs.forEach(t => t.classList.remove("active"));
-          tab.classList.add("active");
-        });
-      });
-
-      const rows = document.querySelectorAll(".rank-row");
-      rows.forEach(row => {
-        row.addEventListener("click", () => {
-          const name = row.querySelector(".rank-name").innerText;
-          alert(name);
-        });
-      });
-
-      if (user && user.isLoggedIn) {
-        const brand = document.querySelector(".navbar-brand");
-        if (brand) {
-          brand.innerHTML += ` <span style="font-size:12px; color:#149b8e;">(${user.name})</span>`;
-        }
-      }
-    </script>
+    </div>
   </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script type="module">
+        import { updateUI } from "./script.js";
+        updateUI();
+    </script>
 </body>
 
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HelpHub AI Profile - Ayesha Khan</title>
+    <title>HelpHub AI Profile - <span class="user"></span> Hussain</title>
     <style>
         :root {
             --bg-color: #f6f3eb;
@@ -264,7 +264,7 @@
         <main class="main-content">
             <section class="main-profile-card">
                 <span class="sub-label">PROFILE</span>
-                <h1>Ayesha Khan</h1>
+                <h1 class="user">Hashir Hussain</h1>
                 <p>Both • Karachi</p>
             </section>
 
@@ -309,7 +309,7 @@
                         <div class="form-group inline-inputs">
                             <div>
                                 <label for="name">Name</label>
-                                <input type="text" id="name" placeholder="Ayesha Khan">
+                                <input type="text" id="name" class="user" placeholder="Hashir Hussain">
                             </div>
                             <div>
                                 <label for="location">Location</label>
@@ -333,6 +333,9 @@
             </div>
         </main>
     </div>
+    <script type="module">
+        import { updateUI } from "./script.js";
+        updateUI();
+    </script>
 </body>
-<script src="java.js"></script>
 </html>

@@ -295,7 +295,7 @@
 
                 <div class="message-row">
                     <div class="message-content">
-                        <p class="message-participants">Ayesha Khan &rarr; Sara Noor</p>
+                        <p class="message-participants"><span class="user">Hashir</span> &rarr; Sara Noor</p>
                         <p class="message-body">I checked your portfolio request. Share the breakpoint screenshots and I can suggest fixes.</p>
                     </div>
                     <div class="message-time-pill">
@@ -305,7 +305,7 @@
 
                 <div class="message-row">
                     <div class="message-content">
-                        <p class="message-participants">Hassan Ali &rarr; Ayesha Khan</p>
+                        <p class="message-participants">Hassan Ali &rarr; <span class="user">Hashir</span></p>
                         <p class="message-body">Your event poster concept is solid. I would tighten the CTA and reduce the background texture.</p>
                     </div>
                     <div class="message-time-pill">
@@ -333,5 +333,8 @@
         </div>
     </div>
 </body>
-<script src="java.js"></script>
+<script type="module">
+        import { updateUI } from "./script.js";
+        updateUI();
+    </script>
 </html>

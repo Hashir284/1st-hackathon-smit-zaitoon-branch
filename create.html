@@ -182,7 +182,7 @@
 
         .inline-inputs {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             gap: 15px;
         }
 
@@ -280,7 +280,7 @@
                 <p class="sub-title">LOGIN / SIGNUP</p>
                 <h2>Authenticate your community profile</h2>
 
-                <form id="form">
+                <form onsubmit="return false">
                     <div class="form-group">
                         <label for="demoUser" class="form-label">Select demo user</label>
                         <input type="text" placeholder="Enter your name" class="form-control" id="demoUser">
@@ -289,9 +289,9 @@
                     <div class="form-group">
                         <label for="role" class="form-label">Role selection</label>
                         <select id="role" class="form-control">
-                            <option>Both</option>
-                            <option>Web Development</option>
-                            <option>Web Design</option>
+                            <option value="both">Both</option>
+                            <option value="wdev">Web Development</option>
+                            <option value="wdes">Web Design</option>
                         </select>
                     </div>
 
@@ -304,19 +304,27 @@
                             <label for="password" class="form-label">Password</label>
                             <input type="password" id="password" class="form-control" placeholder="Enter your password">
                         </div>
+                        <div class="form-group">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm your password">
+                        </div>
                     </div>
 
                 <div style="text-align: center; margin-top: 15px; display: flex;
                 flex-direction: column; align-items: center; justify-content: center; width: 100%; gap: 21px;">
-                    <div onclick="login()" class="btn-green" style="max-width: 130px; text-decoration: none; color: #fff; font-size: 17px;">
-                        <span>Login</span>
-                    </div>
-                    <a href="create.html" style="text-decoration: underline; color: #0d9488;">Create an account?</a>
+                    <a href="#" onclick="create()" class="btn-green" style="max-width: 130px; text-decoration: none; color: #fff; font-size: 17px;">
+                        Create Account
+                    </a>
+                    <a href="index.html" style="text-decoration: underline; color: #0d9488;">Already have an account?</a>
                 </div>
                 </form>
             </aside>
         </main>
     </div>
-    <script src="script.js" type="module"></script>
 </body>
+<script src="script.js" type="module"></script>
+<script type="module">
+        import { updateUI } from "./script.js";
+        updateUI();
+    </script>
 </html>

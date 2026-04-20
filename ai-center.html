@@ -1,331 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Center</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="nav.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Center</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="nav.css">
 
-    <style>
-      * { box-sizing: border-box; margin: 0; padding: 0; }
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  body {
-    font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #d8ede6 0%, #e8ede0 30%, #f0e8d8 60%, #f5e0cc 100%);
-    min-height: 100vh;
-    padding: 0px 0px 48px;
-  }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #d8ede6 0%, #e8ede0 30%, #f0e8d8 60%, #f5e0cc 100%);
+      min-height: 100vh;
+      padding: 0px 0px 48px;
+    }
 
-  .wrapper {
-    margin-top: 35px;
-    max-width: 760px;
-    margin: 0 auto;
-  }
+    .wrapper {
+      margin-top: 35px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
 
-  /* ── HERO ── */
-  .hero {
-    background: #1e2530;
-    border-radius: 18px;
-    padding: 32px 36px 36px;
-    margin-bottom: 35px;
-    margin-top: 35px;
-  }
-  .hero-label {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.38);
-    margin-bottom: 12px;
-  }
-  .hero h1 {
-    font-size: 40px;
-    font-weight: 900;
-    color: #ffffff;
-    line-height: 1.12;
-    letter-spacing: -0.8px;
-    margin-bottom: 14px;
-  }
-  .hero p {
-    font-size: 13px;
-    font-weight: 400;
-    color: rgba(255,255,255,0.4);
-    line-height: 1.55;
-  }
+    /* ── HERO ── */
+    .hero {
+      background: #1e2530;
+      border-radius: 18px;
+      padding: 32px 36px 36px;
+      margin-bottom: 35px;
+      margin-top: 35px;
+    }
 
-  /* ── STAT CARDS ROW ── */
-  .stats-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-bottom: 20px;
-  }
+    .hero-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.38);
+      margin-bottom: 12px;
+    }
 
-  .stat-card {
-    background: #ffffff;
-    border-radius: 14px;
-    padding: 20px 20px 22px;
-  }
-  .stat-label {
-    font-size: 9.5px;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #2a8c7a;
-    margin-bottom: 10px;
-  }
-  .stat-value {
-    font-size: 34px;
-    font-weight: 800;
-    color: #111827;
-    letter-spacing: -1px;
-    line-height: 1;
-    margin-bottom: 10px;
-  }
-  /* first card: text value not number */
-  .stat-value-text {
-    font-size: 26px;
-    font-weight: 800;
-    color: #111827;
-    letter-spacing: -0.5px;
-    line-height: 1.15;
-    margin-bottom: 10px;
-  }
-  .stat-desc {
-    font-size: 12px;
-    font-weight: 400;
-    color: #9ca3af;
-    line-height: 1.55;
-  }
+    .hero h1 {
+      font-size: 40px;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.12;
+      letter-spacing: -0.8px;
+      margin-bottom: 14px;
+    }
 
-  /* ── RECOMMENDATIONS PANEL ── */
-  .reco-panel {
-    background: #f7f5f0;
-    border-radius: 16px;
-    padding: 26px 24px 22px;
-  }
-  .reco-label {
-    font-size: 9.5px;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #2a8c7a;
-    margin-bottom: 8px;
-  }
-  .reco-title {
-    font-size: 26px;
-    font-weight: 800;
-    color: #111827;
-    letter-spacing: -0.4px;
-    margin-bottom: 18px;
-  }
+    .hero p {
+      font-size: 13px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.4);
+      line-height: 1.55;
+    }
 
-  /* Request rows */
-  .request-item {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 16px 18px 14px;
-    margin-bottom: 10px;
-  }
-  .request-item:last-child { margin-bottom: 0; }
+    /* ── STAT CARDS ROW ── */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
 
-  .request-title {
-    font-size: 13.5px;
-    font-weight: 700;
-    color: #111827;
-    margin-bottom: 6px;
-    letter-spacing: -0.1px;
-  }
-  .request-summary {
-    font-size: 12.5px;
-    font-weight: 400;
-    color: #6b7280;
-    line-height: 1.55;
-    margin-bottom: 12px;
-  }
-  .request-tags {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-  }
+    .stat-card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 20px 20px 22px;
+    }
 
-  /* Tags */
-  .tag {
-    font-size: 11px;
-    font-weight: 500;
-    padding: 4px 11px;
-    border-radius: 20px;
-    line-height: 1.5;
-  }
-  .tag-web    { background: #dbeafe; color: #2563eb; }
-  .tag-design { background: #ede9fe; color: #7c3aed; }
-  .tag-career { background: #fef3c7; color: #d97706; }
-  .tag-high   { background: #fee2e2; color: #dc2626; }
-  .tag-medium { background: #ffedd5; color: #ea580c; }
-  .tag-low    { background: #f3f4f6; color: #6b7280; }
-</style>
+    .stat-label {
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #2a8c7a;
+      margin-bottom: 10px;
+    }
+
+    .stat-value {
+      font-size: 34px;
+      font-weight: 800;
+      color: #111827;
+      letter-spacing: -1px;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    /* first card: text value not number */
+    .stat-value-text {
+      font-size: 26px;
+      font-weight: 800;
+      color: #111827;
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+
+    .stat-desc {
+      font-size: 12px;
+      font-weight: 400;
+      color: #9ca3af;
+      line-height: 1.55;
+    }
+
+    /* ── RECOMMENDATIONS PANEL ── */
+    .reco-panel {
+      background: #f7f5f0;
+      border-radius: 16px;
+      padding: 26px 24px 22px;
+    }
+
+    .reco-label {
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #2a8c7a;
+      margin-bottom: 8px;
+    }
+
+    .reco-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #111827;
+      letter-spacing: -0.4px;
+      margin-bottom: 18px;
+    }
+
+    /* Request rows */
+    .request-item {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 16px 18px 14px;
+      margin-bottom: 10px;
+    }
+
+    .request-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .request-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 6px;
+      letter-spacing: -0.1px;
+    }
+
+    .request-summary {
+      font-size: 12.5px;
+      font-weight: 400;
+      color: #6b7280;
+      line-height: 1.55;
+      margin-bottom: 12px;
+    }
+
+    .request-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    /* Tags */
+    .tag {
+      font-size: 11px;
+      font-weight: 500;
+      padding: 4px 11px;
+      border-radius: 20px;
+      line-height: 1.5;
+    }
+
+    .tag-web {
+      background: #dbeafe;
+      color: #2563eb;
+    }
+
+    .tag-design {
+      background: #ede9fe;
+      color: #7c3aed;
+    }
+
+    .tag-career {
+      background: #fef3c7;
+      color: #d97706;
+    }
+
+    .tag-high {
+      background: #fee2e2;
+      color: #dc2626;
+    }
+
+    .tag-medium {
+      background: #ffedd5;
+      color: #ea580c;
+    }
+
+    .tag-low {
+      background: #f3f4f6;
+      color: #6b7280;
+    }
+  </style>
 </head>
+
 <body>
 
-   <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+  <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <div class="brand-box">H</div>
-            HelpHub AI
-        </a>
+      <a class="navbar-brand" href="#">
+        <div class="brand-box">H</div>
+        HelpHub AI
+      </a>
 
-        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+        data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link " href="explore.html">Explore</a></li>
-                <li class="nav-item"><a class="nav-link " href="leaderboard.html">Leaderboard</a></li>
-                <li class="nav-item"><a class="nav-link active" href="ai-center.html">AI Center</a></li>
-            </ul>
-            
-            <div class="d-flex flex-column flex-lg-row align-items-center">
-                <button class="btn btn-signals">Live community signals</button>
-                <button class="btn btn-join">Join platform</button>
-            </div>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="explore.html">Explore</a></li>
+          <li class="nav-item"><a class="nav-link" href="leaderboard.html">Leaderboard</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">AI Center</a></li>
+        </ul>
+        <a href="profile.html" class="btn-onboarding"
+          style="text-decoration: none; color: #00000094; margin-right: 20px;">Profile</a>
+
+        <a href="create-react.html" class="btn btn-join" style="text-decoration: none; color: #fff;">Join
+          platform</a>
+      </div>
+    </div>
+    </div>
+  </nav>
+
+  <div class="wrapper">
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-label">AI CENTER</div>
+      <h1>See what the platform intelligence is noticing.</h1>
+      <p>AI-like insights summarize demand trends, helper readiness, urgency signals, and request recommendations.</p>
+    </div>
+
+    <!-- STAT CARDS -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-label">TREND PULSE</div>
+        <div class="stat-value-text">Web<br>Development</div>
+        <div class="stat-desc">Most common support area based on active community requests.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">URGENCY WATCH</div>
+        <div class="stat-value">2</div>
+        <div class="stat-desc">Requests currently flagged high priority by the urgency detector.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">MENTOR POOL</div>
+        <div class="stat-value">2</div>
+        <div class="stat-desc">Trusted helpers with strong response history and contribution signals.</div>
+      </div>
+    </div>
+
+    <!-- RECOMMENDATIONS -->
+    <div class="reco-panel">
+      <div class="reco-label">AI RECOMMENDATIONS</div>
+      <div class="reco-title">Requests needing attention</div>
+
+      <!-- Item 1 -->
+      <div class="request-item">
+        <div class="request-title">Need help</div>
+        <div class="request-summary">AI summary: Web Development request with high urgency. Best suited for members with
+          relevant expertise.</div>
+        <div class="request-tags">
+          <span class="tag tag-web">Web Development</span>
+          <span class="tag tag-high">High</span>
         </div>
-    </div>
-</nav>
-
-<div class="wrapper">
-
-  <!-- HERO -->
-  <div class="hero">
-    <div class="hero-label">AI CENTER</div>
-    <h1>See what the platform intelligence is noticing.</h1>
-    <p>AI-like insights summarize demand trends, helper readiness, urgency signals, and request recommendations.</p>
-  </div>
-
-  <!-- STAT CARDS -->
-  <div class="stats-row">
-    <div class="stat-card">
-      <div class="stat-label">TREND PULSE</div>
-      <div class="stat-value-text">Web<br>Development</div>
-      <div class="stat-desc">Most common support area based on active community requests.</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-label">URGENCY WATCH</div>
-      <div class="stat-value">2</div>
-      <div class="stat-desc">Requests currently flagged high priority by the urgency detector.</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-label">MENTOR POOL</div>
-      <div class="stat-value">2</div>
-      <div class="stat-desc">Trusted helpers with strong response history and contribution signals.</div>
-    </div>
-  </div>
-
-  <!-- RECOMMENDATIONS -->
-  <div class="reco-panel">
-    <div class="reco-label">AI RECOMMENDATIONS</div>
-    <div class="reco-title">Requests needing attention</div>
-
-    <!-- Item 1 -->
-    <div class="request-item">
-      <div class="request-title">Need help</div>
-      <div class="request-summary">AI summary: Web Development request with high urgency. Best suited for members with relevant expertise.</div>
-      <div class="request-tags">
-        <span class="tag tag-web">Web Development</span>
-        <span class="tag tag-high">High</span>
       </div>
-    </div>
 
-    <!-- Item 2 -->
-    <div class="request-item">
-      <div class="request-title">Need help making my portfolio responsive before demo day</div>
-      <div class="request-summary">Responsive layout issue with a short deadline. Best helpers are frontend mentors comfortable with CSS grids and media queries.</div>
-      <div class="request-tags">
-        <span class="tag tag-web">Web Development</span>
-        <span class="tag tag-high">High</span>
+      <!-- Item 2 -->
+      <div class="request-item">
+        <div class="request-title">Need help making my portfolio responsive before demo day</div>
+        <div class="request-summary">Responsive layout issue with a short deadline. Best helpers are frontend mentors
+          comfortable with CSS grids and media queries.</div>
+        <div class="request-tags">
+          <span class="tag tag-web">Web Development</span>
+          <span class="tag tag-high">High</span>
+        </div>
       </div>
-    </div>
 
-    <!-- Item 3 -->
-    <div class="request-item">
-      <div class="request-title">Looking for Figma feedback on a volunteer event poster</div>
-      <div class="request-summary">A visual design critique request where feedback on hierarchy, spacing, and messaging would create the most value.</div>
-      <div class="request-tags">
-        <span class="tag tag-design">Design</span>
-        <span class="tag tag-medium">Medium</span>
+      <!-- Item 3 -->
+      <div class="request-item">
+        <div class="request-title">Looking for Figma feedback on a volunteer event poster</div>
+        <div class="request-summary">A visual design critique request where feedback on hierarchy, spacing, and
+          messaging would create the most value.</div>
+        <div class="request-tags">
+          <span class="tag tag-design">Design</span>
+          <span class="tag tag-medium">Medium</span>
+        </div>
       </div>
-    </div>
 
-    <!-- Item 4 -->
-    <div class="request-item">
-      <div class="request-title">Need mock interview support for internship applications</div>
-      <div class="request-summary">Career coaching request focused on confidence-building, behavioral answers, and entry-level frontend interviews.</div>
-      <div class="request-tags">
-        <span class="tag tag-career">Career</span>
-        <span class="tag tag-low">Low</span>
+      <!-- Item 4 -->
+      <div class="request-item">
+        <div class="request-title">Need mock interview support for internship applications</div>
+        <div class="request-summary">Career coaching request focused on confidence-building, behavioral answers, and
+          entry-level frontend interviews.</div>
+        <div class="request-tags">
+          <span class="tag tag-career">Career</span>
+          <span class="tag tag-low">Low</span>
+        </div>
       </div>
+
     </div>
 
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module">
+        import { updateUI } from "./script.js";
+        updateUI();
+    </script>
 
-</div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-      <script>
-        const user = JSON.parse(localStorage.getItem("helphubUser"));
-
-const joinBtn = document.querySelector(".btn-join");
-if (joinBtn) {
-    joinBtn.addEventListener("click", () => {
-        window.location.href = "login.html";
-    });
-}
-
-const signalsBtn = document.querySelector(".btn-signals");
-if (signalsBtn) {
-    signalsBtn.addEventListener("click", () => {
-        alert("🔥 Live Signals:\n\n• 3 new help requests\n• 2 solved today\n• 5 active mentors online");
-    });
-}
-
-const navLinks = document.querySelectorAll(".nav-link");
-navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.href === window.location.href) {
-        link.classList.add("active");
-    }
-});
-
-if (user && user.isLoggedIn) {
-    const brand = document.querySelector(".navbar-brand");
-    if (brand) {
-        brand.innerHTML += ` <span style="font-size:12px; color:#149b8e;">(${user.name})</span>`;
-    }
-}
-
-const items = document.querySelectorAll(".request-item");
-
-items.forEach(item => {
-    item.addEventListener("click", () => {
-        const title = item.querySelector(".request-title").innerText;
-        alert("Opening: " + title);
-    });
-});
-
-const statValues = document.querySelectorAll(".stat-value");
-
-statValues.forEach(val => {
-    let count = 0;
-    const target = parseInt(val.innerText);
-    const interval = setInterval(() => {
-        count++;
-        val.innerText = count;
-        if (count >= target) clearInterval(interval);
-    }, 30);
-});
-      </script>
 </body>
+
 </html>

@@ -286,7 +286,7 @@
 
                 <article class="notification-card unread">
                     <div class="notification-content">
-                        <p class="notification-title">Ayesha Khan offered help on "Need help"</p>
+                        <p class="notification-title"><span class="user">Hashir</span> offered help on "Need help"</p>
                         <p class="notification-meta">Match &bull; Just now</p>
                     </div>
                     <span class="unread-tag">Unread</span>
@@ -354,31 +354,9 @@
             </div>
         </main>
     </div>
+<script type="module">
+        import { updateUI } from "./script.js";
+        updateUI();
+    </script>
 </body>
-<script>
-
-
-const cards = document.querySelectorAll(".notification-card");
-
-cards.forEach(card => {
-    card.addEventListener("click", () => {
-        card.classList.remove("unread");
-
-        const tag = card.querySelector(".unread-tag");
-        if (tag) tag.innerText = "Read";
-    });
-});
-
-const readLinks = document.querySelectorAll(".read-action-link");
-
-if (user && user.isLoggedIn) {
-    const brand = document.querySelector(".app-name");
-    if (brand) {
-        brand.innerHTML += ` <span style="font-size:12px; color:#0a7353;">(${user.name})</span>`;
-    }
-}
-
-const unreadCount = document.querySelectorAll(".notification-card.unread").length;
-document.title = unreadCount > 0 ? `(${unreadCount}) Notifications` : "Notifications";
-</script>
 </html>

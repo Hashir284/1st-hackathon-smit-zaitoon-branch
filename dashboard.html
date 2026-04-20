@@ -67,7 +67,7 @@
         /* Sirf un links pe hover jo active nahi hain */
         .nav-link:hover:not(.active) {
             color: #149b8e !important;
-            /* transform: translateY(-2px); */
+            transform: translateY(-2px);
 
         }
 
@@ -157,13 +157,13 @@
                     <li class="nav-item"><a class="nav-link" href="leaderboard.html">Leaderboard</a></li>
                     <li class="nav-item"><a class="nav-link" href="ai-center.html">AI Center</a></li>
                 </ul>
-                    <a href="profile.html" class="btn btn-join" style="text-decoration: none; color: #fff; margin-right: 20px;">Live community
-                        signals</a>
-                    
-                    <a href="create-react.html" class="btn btn-join" style="text-decoration: none; color: #fff;">Join
-                        platform</a>
-                </div>
+                <a href="profile.html" class="btn-onboarding"
+                    style="text-decoration: none; color: #00000094; margin-right: 20px;">Profile</a>
+
+                <a href="create-react.html" class="btn btn-join" style="text-decoration: none; color: #fff;">Join
+                    platform</a>
             </div>
+        </div>
         </div>
     </nav>
 
@@ -310,7 +310,7 @@
                         <p>helpn needed</p>
                         <div class="req-footer">
                             <div class="user-info">
-                                <strong>Ayesha Khan</strong>
+                                <strong class="user">Hashir Hussain</strong>
                                 <small>Karachi • 1 helper interested</small>
                             </div>
                             <button class="btn-details">Open details</button>
@@ -356,7 +356,7 @@
                         </div>
                         <div class="req-footer">
                             <div class="user-info">
-                                <strong>Ayesha Khan</strong>
+                                <strong class="user">Hashir Hussain</strong>
                                 <small>Lahore • 1 helper interested</small>
                             </div>
                             <button class="btn-details">Open details</button>
@@ -372,27 +372,10 @@
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const signalsBtn = document.querySelector(".btn-signals");
-        if (signalsBtn) {
-            signalsBtn.addEventListener("click", () => {
-                alert("🔥 Live Signals:\n\n• 3 new help requests\n• 2 solved today\n• 5 active mentors online");
-            });
-        }
-
-        const aiBtn = document.querySelector(".btn-onboarding");
-        if (aiBtn) {
-            aiBtn.addEventListener("click", () => {
-                alert("🤖 AI Onboarding:\n\n• Ask better questions\n• Get faster help\n• Improve your request quality");
-            });
-        }
-
-        const detailBtns = document.querySelectorAll(".btn-details");
-        detailBtns.forEach(btn => {
-            btn.addEventListener("click", () => {
-                alert("Opening request details...");
-            });
-        });
+    <script src="script.js" type="module"></script>
+    <script type="module">
+        import { updateUI } from "./script.js";
+        updateUI();
     </script>
 </body>
 

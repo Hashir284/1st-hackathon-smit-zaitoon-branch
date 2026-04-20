@@ -402,7 +402,7 @@
                     <h3>Need help</h3>
                     <p class="request-desc">help is needed</p>
                     <div class="card-footer">
-                        <span class="user-name">Ayesha Khan</span>
+                        <span class="user user-name">Hashir Hussain</span>
                         <span class="user-meta">Karachi • 1 helper interested</span>
                     </div>
                 </div>
@@ -452,7 +452,7 @@
                         <span class="badge skill-tag">Design Review</span>
                     </div>
                     <div class="card-footer">
-                        <span class="user-name">Ayesha Khan</span>
+                        <span class="user user-name">Hashir Hussain</span>
                         <span class="user-meta">Lahore • 1 helper interested</span>
                     </div>
                 </div>
@@ -487,72 +487,10 @@
             </div>
         </section>
     </main>
+        <script type="module">
+        import { updateUI } from "./script.js";
+        updateUI();
+    </script>
 </body>
-<script>
-
-    const detailBtns = document.querySelectorAll(".details-btn");
-    detailBtns.forEach(btn => {
-        btn.addEventListener("click", () => {
-            const title = btn.parentElement.querySelector("h3").innerText;
-            alert("Opening: " + title);
-        });
-    });
-
-    const categorySelect = document.getElementById("category");
-    const urgencySelect = document.getElementById("urgency");
-    const skillsInput = document.getElementById("skills");
-    const locationInput = document.getElementById("location");
-
-    const cards = document.querySelectorAll(".request-card");
-
-    function filterCards() {
-        const category = categorySelect.value.toLowerCase();
-        const urgency = urgencySelect.value.toLowerCase();
-        const skills = skillsInput.value.toLowerCase();
-        const location = locationInput.value.toLowerCase();
-
-        cards.forEach(card => {
-            const text = card.innerText.toLowerCase();
-
-            const matchCategory = category === "all categories" || text.includes(category);
-            const matchUrgency = urgency === "all urgency levels" || text.includes(urgency);
-            const matchSkills = text.includes(skills);
-            const matchLocation = text.includes(location);
-
-            if (matchCategory && matchUrgency && matchSkills && matchLocation) {
-                card.style.display = "grid";
-            } else {
-                card.style.display = "none";
-            }
-        });
-    }
-
-    if (categorySelect) categorySelect.addEventListener("change", filterCards);
-    if (urgencySelect) urgencySelect.addEventListener("change", filterCards);
-    if (skillsInput) skillsInput.addEventListener("input", filterCards);
-    if (locationInput) locationInput.addEventListener("input", filterCards);
-
-    const categories = ["Web Development", "Design", "Career"];
-    const urgencies = ["High", "Medium", "Low"];
-
-    categories.forEach(c => {
-        const option = document.createElement("option");
-        option.textContent = c;
-        categorySelect.appendChild(option);
-    });
-
-    urgencies.forEach(u => {
-        const option = document.createElement("option");
-        option.textContent = u;
-        urgencySelect.appendChild(option);
-    });
-
-    if (user && user.isLoggedIn) {
-        const brand = document.querySelector(".brand-name");
-        if (brand) {
-            brand.innerHTML += ` <span style="font-size:12px; color:#0d9488;">(${user.name})</span>`;
-        }
-    }
-</script>
 
 </html>

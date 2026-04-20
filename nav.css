@@ -77,6 +77,23 @@
             transition: 0.3s ease;
         }
 
+        .btn-onboarding {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.btn-onboarding:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
         .btn-signals:hover {
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             color: #149b8e;
