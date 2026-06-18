@@ -51,7 +51,7 @@ function create() {
     localStorage.setItem("User", demoUser);
     localStorage.setItem("helphubUser", JSON.stringify(gmail));
 
-    window.location.href = "/hackathon-smit-zaitoon-branch/dashboard.html";
+    window.location.pathname = "/hackathon-smit-zaitoon-branch/dashboard.html/";
 }
 
 function login() {
@@ -85,7 +85,7 @@ function login() {
 
 
     if (flag) {
-        window.location.href = "/hackathon-smit-zaitoon-branch/dashboard.html";
+        window.location.pathname = "/hackathon-smit-zaitoon-branch/dashboard.html/";
         localStorage.setItem("User", demoUser);
         // return email 
     }else{
