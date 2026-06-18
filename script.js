@@ -5,7 +5,6 @@ let gmail = [];
 let user = localStorage.getItem("helphubUser");
 if (user) {
     gmail = JSON.parse(user);
-
 } else {
     gmail = [];
 }
@@ -52,7 +51,7 @@ function create() {
     localStorage.setItem("User", demoUser);
     localStorage.setItem("helphubUser", JSON.stringify(gmail));
 
-    window.location.href = "/dashboard.html";
+    window.location.href = "/hackathon-smit-zaitoon-branch/dashboard.html";
 }
 
 function login() {
@@ -74,7 +73,7 @@ function login() {
     console.log(gmail);
 
     for (let i = 0; i < gmail.length; i++) {
-        if (email == gmail[i].email && password == gmail[i].password && demoUser.toLowerCase() == gmail[i].name.toLowerCase() && role.toLowerCase() == gmail[i].role.toLowerCase()) {
+        if (email.toLowerCase() == gmail[i].email.toLowerCase() && password == gmail[i].password && demoUser.toLowerCase() == gmail[i].name.toLowerCase() && role.toLowerCase() == gmail[i].role.toLowerCase()) {
             flag = true;
             console.log(gmail[i]);
         }
@@ -86,10 +85,12 @@ function login() {
 
 
     if (flag) {
-        window.location.href = "/dashboard.html";
+        window.location.href = "/hackathon-smit-zaitoon-branch/dashboard.html";
         localStorage.setItem("User", demoUser);
         // return email 
     }else{
+        console.log();
+        
         alert("Invalid credentials! Please try again.");
         return
     }
@@ -108,3 +109,5 @@ export function updateUI() {
         el.innerText = currentUser;
     });
 }
+
+console.log(window.location.pathname);
